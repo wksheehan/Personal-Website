@@ -1,0 +1,321 @@
+/*
+Theme Name: ProfessionalWebsite
+Author: Will Sheehan
+Version: 1.0
+*/
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  margin-top: 0 !important;
+}
+body {
+  font-family: Nunito;
+  margin: 0;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  font-style: italic;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+header {
+  display: inline-block;
+}
+h1,
+ul {
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 0;
+}
+
+/* -- HEADER -- */
+.site-header {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-plus-nav {
+  padding-top: 3%;
+  position: fixed;
+  width: 100%;
+}
+.logo {
+  margin-left: 9.8%;
+  display: inline-block;
+}
+.logo a {
+  color: white;
+}
+
+
+.top-nav {
+  float: right;
+  width: 50%;
+  margin-right: 5%;
+  display: inline;
+}
+
+.desktop-menu ul li {
+  float: right;
+  padding-right: 10%;
+}
+
+.desktop-menu ul li a {
+  color: white;
+  font-size: 2rem;
+  float: left;
+}
+
+.desktop-menu ul li.current-menu-item a,
+.desktop-menu ul li.current-menu-item a:hover {
+  border-bottom: 2px solid currentColor;
+  font-style: normal;
+  cursor: default;
+}
+
+.dropdown-content ul li.current-menu-item a,
+.dropdown-content ul li.current-menu-item a:hover {
+  font-style: normal;
+  color: lightgrey;
+}
+/* Hamburger */
+#hamburger {
+  color: white;
+  font-size: 2rem;
+  font-weight: normal;
+  float: right;
+}
+
+#hamburger:hover {
+  font-style: normal;
+  color: lightgrey;
+}
+
+.dropdown {
+  display: none;
+  float: right;
+  position: relative;
+  margin-right: 10%;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown-content.visible {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  color: white;
+  font-size: 2rem;
+  text-align: right;
+}
+
+@media screen and (max-width: 850px) {
+  .dropdown {
+    display: inline-block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+}
+/* Spiderman image */
+.main-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: url("img/spiderman.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Scroll Arrow */
+.scroll-arrow {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: white;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+
+.scroll-arrow span {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  width: 40px;
+  height: 40px;
+  margin-left: -12px;
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+.scroll-arrow:hover {
+  opacity: .5;
+}
+
+/* -- WELCOME -- */
+.welcome-block {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  margin-bottom: 110px;
+  background-color: white;
+}
+
+.welcome-block h1 {
+  margin-left: 25vw;
+  margin-right: 25vw;
+  text-align: center;
+  color: #FE4A4A;
+}
+
+.scroll-arrow.up {
+  position: absolute;
+  left: 50%;
+  bottom: 1%;
+}
+.scroll-arrow.up span {
+  border-left: 4px solid #FE4A4A;
+  border-bottom: 4px solid DodgerBlue;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+
+#spiderman {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  position: absolute;
+  background: url("img/spiderman-2.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: 6% -700px;
+  z-index: -100;
+  transition: 4.5s;
+}
+
+#spiderman.stuck {
+  background-attachment: scroll;
+  background-position: 6% 0;
+  transition: 4.5s;
+}
+
+@media screen and (max-width: 1285px) {
+  #spiderman.stuck {
+    background-position: 50% -500px;
+  }
+  #spiderman {
+    background-position: 50% -700px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  #spiderman.stuck {
+    background-position: 50% -500px;
+  }
+  #spiderman {
+    background-position: 50% -700px;
+  }
+}
+
+/* -- PAGE -- */
+.page {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 110px;
+  background-color: white;
+}
+
+.page-header {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+  border-bottom: 2px solid lightgrey;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.page-header h2 {
+  text-align: center;
+  color: #FE4A4A;
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.page-content {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 10%;
+}
+.page-content p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: DodgerBlue;
+}
+
+/* -- FOOTER -- */
+.site-footer {
+  width: 100%;
+  display: inline-block;
+  position: fixed;
+  height: 110px;
+  bottom: 0;
+  z-index: -200;
+  background-color: black;
+}
+
+.bottom-nav {
+  text-align: center;
+}
+
+.bottom-nav ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+}
+
+.bottom-nav ul li {
+  display: inline;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.bottom-nav ul li a {
+  color: #FE4A4A;
+}
+
+.bottom-nav ul li a:hover {
+  color: DodgerBlue;
+}
+
+.copyright {
+  display: inline-block;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: bold;
+}
